@@ -1,0 +1,19 @@
+[versions]
+arrow-analysis = "2.0.2"
+arrow-stack = "1.0.1"
+kotest = "5.2.3"
+
+[libraries]
+arrow-stack = { group = "io.arrow-kt", name = "arrow-stack", version.ref = "arrow-stack" }
+arrow-core = { module = "io.arrow-kt:arrow-core" }
+arrow-fx = { module = "io.arrow-kt:arrow-fx-coroutines" }
+kotest-runner = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
+
+[plugins]
+arrow-analysis = { id = "io.arrow-kt.analysis.kotlin", version = "2.0.2" }
+
+[bundles]
+arrow = ["arrow-core", "arrow-fx" ]
+kotest = ["kotest-runner", "kotest-assertions", "kotest-property" ]
